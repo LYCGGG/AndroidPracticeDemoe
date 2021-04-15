@@ -1,5 +1,7 @@
 package com.lyc.daggerdemo;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 
 /**
@@ -8,11 +10,12 @@ import dagger.Component;
  * @version:
  * @description：组件，用于注入对象到其他类中
  */
+@Singleton
 @Component(modules =
         {
                 HttpModule.class
         })
 public interface MyComponent {
 //    参数不能用多态Object
-    void injectMyActivity(MainActivity mainActivity);
+    HttpModule getHttpModule();
 }

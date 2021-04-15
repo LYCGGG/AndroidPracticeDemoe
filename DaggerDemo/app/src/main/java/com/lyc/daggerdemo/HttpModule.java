@@ -2,6 +2,7 @@ package com.lyc.daggerdemo;
 
 import com.lyc.daggerdemo.object.HttpObject;
 
+import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
@@ -13,10 +14,8 @@ import dagger.Provides;
  */
 // 单独抽离出来
 @Module
-public class HttpModule {
+public abstract class HttpModule {
 
-    @Provides
-    public HttpObject provideHttpObject(){
-        return new HttpObject();
-    }
+    @Binds
+    public abstract HttpObject provideHttpObject(HttpObject httpObject);
 }
