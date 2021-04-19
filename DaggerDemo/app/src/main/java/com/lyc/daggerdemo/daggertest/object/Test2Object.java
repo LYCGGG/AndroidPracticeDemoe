@@ -15,4 +15,14 @@ public class Test2Object {
     @Inject
     public Test2Object() {
     }
+
+    int x;
+
+    public void setX(int X){
+        this.x = X;
+    }
+
+    public int getX(){
+        return this.x;
+    }
 }

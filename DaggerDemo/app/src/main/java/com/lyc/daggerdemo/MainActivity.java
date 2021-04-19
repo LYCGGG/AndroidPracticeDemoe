@@ -3,6 +3,7 @@ package com.lyc.daggerdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.lyc.daggerdemo.daggertest.component.DaggerTest2Component;
 import com.lyc.daggerdemo.daggertest.object.Test2Object;
@@ -32,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
 //        这种来将MainActivity中的Test1Object赋值。
 
         DaggerTest2Component.builder().build().inject(this);
+//        经过上面的注入之后，就可以正常的调用其中的方法了
+        test2Object.setX(10);
+        Log.i(TAG, "onCreate: " + test2Object.getX());
     }
 }
