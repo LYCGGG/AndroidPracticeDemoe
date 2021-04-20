@@ -56,4 +56,14 @@ public class TestA{
 
 在这其中，DaggerXXXComponent就是起到一个桥梁作用，并且它还是由系统自动生成(借助于XXXComponent)。
 
+### Provide起到的作用
+
+上面说的是Inject和Component的作用，但Provider又起到什么作用呢？
+
+其实无论是Provides还是下面会提到的Binds都是起到一个说明绑定的作用，实际上我们既不用调用这些个方法来手动实现绑定或者说类的提供。而与Binds不同的是，Provides是需要提供具体方法的。
+
+### @Binds
+
+这玩意搞了好久才懂，没想到真没有方法会调用到Module中的绑定方法，而这个注解只是起到一个说明作用。我也是醉了。
+
 具体是使用方法请看代码。

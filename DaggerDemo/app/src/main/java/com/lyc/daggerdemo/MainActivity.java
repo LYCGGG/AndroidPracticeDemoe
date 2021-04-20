@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.lyc.daggerdemo.daggertest.component.DaggerTest2Component;
 import com.lyc.daggerdemo.daggertest.object.Test2Object;
+import com.lyc.daggerdemo.daggertest.object.Test3Object;
 
 import javax.inject.Inject;
 
@@ -19,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
 //    Test1Object test1Object;
 //  通过声明这个注入对象，下面的Dagger就可以将MainActivity注入进去了
 
+//    @Inject
+//    Test2Object test2Object;
+
     @Inject
-    Test2Object test2Object;
+    Test3Object test3Object;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +36,16 @@ public class MainActivity extends AppCompatActivity {
 //        查询inject方法发现，它最终会在DaggerTest1Component中调用MainActivity_MembersInjector.injectTest1Object(instance, new Test1Object());
 //        这种来将MainActivity中的Test1Object赋值。
 
-        DaggerTest2Component.builder().build().inject(this);
+//        DaggerTest2Component.builder().build().inject(this);
 //        经过上面的注入之后，就可以正常的调用其中的方法了
-        test2Object.setX(10);
-        Log.i(TAG, "onCreate: " + test2Object.getX());
+//        test2Object.setX(10);
+//        Log.i(TAG, "onCreate: " + test2Object.getX());
+//        对于Binds绑定注解，是这样用的。
+        DaggerTest2Component.builder().build().inject(this);
+        test3Object.set(10);
+        Log.i(TAG, "onCreate: " + test3Object.get());
+        test3Object.set("what");
+        Log.i(TAG, "onCreate: "+ test3Object.getString());
+
     }
 }
