@@ -66,4 +66,14 @@ public class TestA{
 
 这玩意搞了好久才懂，没想到真没有方法会调用到Module中的绑定方法，而这个注解只是起到一个说明作用。我也是醉了。
 
+### @Component && @Subcomponent
+
+简单来说，@Component需要指明Component所依赖的Component，而Subcomponent是不太关心这点的。
+
+实际操作是(仅文字论述):有一个Module中写了两个方法表明提供两个依赖，然后有个Component指明该Module但是指提供了获取其中一个依赖的方法。然后再使用一个Component添加对前Component的依赖。注入之后就会发现，提供了获取方法的依赖是可以获取的(好™拗口，而且是废话，但事实确实如此)。如果想要获取另一个依赖，那么就要添加对应的方法，或者使用Subcomponent。
+
+对于Subcomponet，操作是在Component中直接提供即可。
+
+待更新。。。
+
 具体是使用方法请看代码。

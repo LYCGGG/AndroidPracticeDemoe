@@ -23,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
 //    @Inject
 //    Test2Object test2Object;
 
-    @Inject
-    Test3Object test3Object;
+//    @Inject
+//    Test3Object test3Object;
+//
+//    @Inject
+//    Test3Object test3Object2;
+
+//    @Inject
+//    Test_Sub_Object test_sub_object;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +47,17 @@ public class MainActivity extends AppCompatActivity {
 //        test2Object.setX(10);
 //        Log.i(TAG, "onCreate: " + test2Object.getX());
 //        对于Binds绑定注解，是这样用的。
-        DaggerTest2Component.builder().build().inject(this);
-        test3Object.set(10);
-        Log.i(TAG, "onCreate: " + test3Object.get());
-        test3Object.set("what");
-        Log.i(TAG, "onCreate: "+ test3Object.getString());
+
+//        DaggerTest2Component.builder().build().inject(this);
+//        test3Object.set(10);
+//        Log.i(TAG, "onCreate: " + test3Object.get());
+//        test3Object.set("what");
+//        Log.i(TAG, "onCreate: "+ test3Object.getString());
+//        test3Object2.set("sss");
+//        Log.i(TAG, "onCreate: " + test3Object2.getString());
+//        Log.i(TAG, "onCreate: "+ test3Object.getString());
+
+
 
     }
 }
