@@ -2,6 +2,7 @@ package com.lyc.daggerdemo.daggertest.component;
 
 import com.lyc.daggerdemo.MainActivity;
 import com.lyc.daggerdemo.daggertest.module.TestSubModule;
+import com.lyc.daggerdemo.daggertest.module.TestSubModule2;
 import com.lyc.daggerdemo.daggertest.object.Test_Sub_Object;
 
 import dagger.Component;
@@ -16,5 +17,5 @@ import dagger.Component;
         TestSubModule.class
 })
 public interface  TestSubComponent1 {
-    Test_Sub_Object getTestSubObject();
+//    TestSubComponent2 addSub(TestSubModule2 testSubModule2);
 }

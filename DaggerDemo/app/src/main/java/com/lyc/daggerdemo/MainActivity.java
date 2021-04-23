@@ -5,9 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.lyc.daggerdemo.daggertest.component.DaggerTest2Component;
+
+import com.lyc.daggerdemo.daggertest.component.TestSubComponent1;
+import com.lyc.daggerdemo.daggertest.component.TestSubComponent2;
+import com.lyc.daggerdemo.daggertest.module.TestSubModule;
+import com.lyc.daggerdemo.daggertest.module.TestSubModule2;
 import com.lyc.daggerdemo.daggertest.object.Test2Object;
 import com.lyc.daggerdemo.daggertest.object.Test3Object;
+import com.lyc.daggerdemo.daggertest.object.Test_Sub_Object;
+import com.lyc.daggerdemo.daggertest.object.Test_Sub_Object2;
+import com.lyc.daggerdemo.daggertest.object.Test_Sub_Object3;
+import com.lyc.daggerdemo.daggertest.subtest.Cloth;
+import com.lyc.daggerdemo.daggertest.subtest.DaggerPackageComponent;
+import com.lyc.daggerdemo.daggertest.subtest.Food;
+import com.lyc.daggerdemo.daggertest.subtest.PackageComponent;
+import com.lyc.daggerdemo.daggertest.subtest.User;
+import com.lyc.daggerdemo.daggertest.subtest.UserModule;
 
 import javax.inject.Inject;
 
@@ -31,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
 //    @Inject
 //    Test_Sub_Object test_sub_object;
+
+    @Inject
+    Cloth mCloth;
+
+    @Inject
+    Food mFood;
+
+    @Inject
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +79,13 @@ public class MainActivity extends AppCompatActivity {
 //        Log.i(TAG, "onCreate: " + test3Object2.getString());
 //        Log.i(TAG, "onCreate: "+ test3Object.getString());
 
-
+//        SubComponent用法学习，但是这样创建毫无意义的类太累了，不如设定情景吧。重新再来一个
+        UserModule userModule = new UserModule();
+        PackageComponent packageComponent = DaggerPackageComponent.builder().build();
+        packageComponent.getUserComponent(userModule).inject(this);
+        mCloth.setPrice(100);
+//        NB成功了
+        Log.i(TAG, "onCreate: " + mCloth.getPrice());
 
     }
 }
