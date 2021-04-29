@@ -1,2 +1,3 @@
+include ':annotationdemo'
 include ':app'
 rootProject.name = "DaggerDemo"
