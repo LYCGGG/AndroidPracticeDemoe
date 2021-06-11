@@ -1,2 +1,3 @@
+include ':servicedemo'
 include ':app'
 rootProject.name = "AlertDialogDemo"
