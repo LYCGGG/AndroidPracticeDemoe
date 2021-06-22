@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
         intent1.putExtras(bundle);
         Log.i(TAG, "onCreate: intent test " + intent1.getExtras());
         Log.i(TAG, "onCreate: " + Thread.currentThread().getName());
+
+        ParcelTest parcelTest = new ParcelTest("test",1, 1.223f,true,"wc");
     }
 }
