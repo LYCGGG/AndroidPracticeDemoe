@@ -89,3 +89,7 @@ public class TestA{
 简单来说，如果你想要保证两个Component相互独立，那就使用Component+dependencies的方式来说明，而如果想要两者内聚(cohesive),但又不关心哪个component依赖于哪个component，那么就使用Subcomponent.
 
 具体是使用方法请看代码。
+
+## 关键之补充说明
+
+依照Android Studio的推荐管理方式和我自己最初的计划，这个仓库用来存放Android用的Demo，每个Demo都是一个Project(而非Moudle)。但是Android Studio内置的Git管理又是根据Project来管理的。这样两者就发生冲突了，解决办法是舍弃AS内置的Git管理工具，采用较为完善的Github,SourceTree等Git可视化项目管理工具。当然简单的commit等可以在AS中直接进行，也比较方便。
