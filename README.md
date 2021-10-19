@@ -93,3 +93,5 @@ public class TestA{
 ## 关键之补充说明
 
 依照Android Studio的推荐管理方式和我自己最初的计划，这个仓库用来存放Android用的Demo，每个Demo都是一个Project(而非Moudle)。但是Android Studio内置的Git管理又是根据Project来管理的。这样两者就发生冲突了，解决办法是舍弃AS内置的Git管理工具，采用较为完善的Github,SourceTree等Git可视化项目管理工具。当然简单的commit等可以在AS中直接进行，也比较方便。
+
+由于SourceTree要求使用PuTTY来进行SSH认证，而在公司网络中SSH连接服务器会被拒绝的。所以测试验证下。
