@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PreferenceDemo</string>
+    <string name="main_category_title">标题栏</string>
+    <string name="key_main_category_title">key_main_category</string>
+    <string name="first_preference_button">首个Preference点击测试</string>
+    <string name="key_first_preference_button">key_first_preference_button</string>
+</resources>

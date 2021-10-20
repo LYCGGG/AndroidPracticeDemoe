@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/main_category_title"
+        android:key="@string/key_main_category_title">
+
+<!--        中间可以夹杂Preference -->
+        <Preference
+            android:key="@string/key_first_preference_button"
+            android:title="@string/first_preference_button"
+            android:summary="首个Preference的Summary"/>
+        
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -6,6 +6,14 @@
 
 [TOC]
 
+## 关键之补充说明
+
+直接进行一个分析和结论的说明：
+
+当前仓库的矛盾点在于我的想法是使用该仓库来存储练习过的Android Project Demo，依照Android Studio推荐的架构方式，**每一个Demo是一个Project**而非当作Moudle。然而Android Studio也内置了Git管理工具，但是它是以Project为仓库进行管理的。
+
+解决办法是引入SourceTree这一个可视化的Git管理工具，用来管理整个Demo仓库，而每个Project就在AS中打开并处理即可。当然AS中也可以Commit，但只是作为辅助。
+
 ## DaggerDemo
 
 学习Dagger注入技术所练习的demo，受限于gitigonre,编译过程中生成的文件没有上传到GitHub，但是要想梳理清楚Dagger2技术下代码是如何调用的还真得看编译过程中生成的文件。
@@ -90,8 +98,8 @@ public class TestA{
 
 具体是使用方法请看代码。
 
-## 关键之补充说明
+## PreferenceDemo
 
-依照Android Studio的推荐管理方式和我自己最初的计划，这个仓库用来存放Android用的Demo，每个Demo都是一个Project(而非Moudle)。但是Android Studio内置的Git管理又是根据Project来管理的。这样两者就发生冲突了，解决办法是舍弃AS内置的Git管理工具，采用较为完善的Github,SourceTree等Git可视化项目管理工具。当然简单的commit等可以在AS中直接进行，也比较方便。
+这个Demo是用来学习Perference作为Activity时的一些简单用法，以及一些常用的Perference，它经常被用于系统应用中，但是第三方使用时似乎是不推荐的。
 
-由于SourceTree要求使用PuTTY来进行SSH认证，而在公司网络中SSH连接服务器会被拒绝的。所以测试验证下。
+其实它应该是比一般的Activity简单的，但是简单也会有问题。
