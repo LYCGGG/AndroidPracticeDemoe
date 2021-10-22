@@ -9,6 +9,19 @@
             android:key="@string/key_first_preference_button"
             android:title="@string/first_preference_button"
             android:summary="首个Preference的Summary"/>
-        
     </PreferenceCategory>
+
+    <ListPreference
+        android:key="@string/key_list_preference"
+        android:title="@string/list_preference_title"
+        android:summary="List的Summary"
+        android:entries="@array/list_preference_entry"
+        android:entryValues="@array/list_preference_values"
+        />
+
+    <SwitchPreference
+        android:key="@string/key_switch_preference"
+        android:title="@string/switch_preference_title"
+        />
+
 </PreferenceScreen>

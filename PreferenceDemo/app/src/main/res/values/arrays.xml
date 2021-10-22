@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_preference_entry">
+        <item>列表1</item>
+        <item>列表2</item>
+        <item>列表3</item>
+        <item>列表4</item>
+    </string-array>
+    <string-array name="list_preference_values">
+        <item>VALUE-1</item>
+        <item>VALUE-2</item>
+        <item>VALUE-3</item>
+        <item>VALUE-4</item>
+    </string-array>
+</resources>
