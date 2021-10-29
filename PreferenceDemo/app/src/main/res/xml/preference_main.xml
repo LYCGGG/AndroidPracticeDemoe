@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory
         android:title="@string/main_category_title"
         android:key="@string/key_main_category_title">
@@ -23,5 +24,19 @@
         android:key="@string/key_switch_preference"
         android:title="@string/switch_preference_title"
         />
+
+    <EditTextPreference
+        android:key="@string/key_edit_preference"
+        android:title="@string/edit_preference_title"
+        android:dialogTitle="@string/edit_preference_dialog_title"
+        />
+
+<!--    自定义Preference-->
+<!--    很奇怪的一点是这个用的是Androidx的Preference,所以自定义的也要继承Androidx的Preference -->
+    <com.lyc.preferencedemo.custompreference.CustomEditTextPreference
+        android:key="key_custom_edit_preference"
+        android:title="自定义EditPreference测试"
+        />
+
 
 </PreferenceScreen>

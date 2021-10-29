@@ -8,4 +8,8 @@
     <string name="list_preference_title">ListPreference测试</string>
     <string name="key_switch_preference">key_switch_preference</string>
     <string name="switch_preference_title">SwitchPreference测试</string>
+    <string name="key_edit_preference">key_edit_preference</string>
+    <string name="edit_preference_title">EditPreference测试</string>
+    <string name="edit_preference_dialog_title">EditDialog测试</string>
+    <string name="edittextdialog_title">EditTextDialog弹框Title</string>
 </resources>

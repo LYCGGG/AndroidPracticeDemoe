@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -19,12 +20,16 @@ public class MainActivity extends PreferenceActivity {
     private final String key_first_preference_button_str = "key_first_preference_button";
     private final String key_list_preference = "key_list_preference";
     private final String key_switch_preference = "key_switch_preference";
+    private final String key_edit_preference = "key_edit_preference";
 
     private PreferenceScreen mainPreferenceScreen;
     private PreferenceCategory firstPreferenceCategory;
     private Preference firstPreference;
     private ListPreference mListPreference;
     private SwitchPreference mSwitchPreference;
+    private EditTextPreference mEditTextPreference;
+
+    private String editReturnStr ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class MainActivity extends PreferenceActivity {
         FirstPreference();
         ListPreference();
         SwitchPreference();
+        EditPreference();
     }
 
     private void init() {
@@ -80,10 +86,27 @@ public class MainActivity extends PreferenceActivity {
 
     private void SwitchPreference() {
         mSwitchPreference = (SwitchPreference) findPreference(key_switch_preference);
+//        使用onPreferenceChangeListener来监听状态
         mSwitchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object o) {
                 Log.i(TAG, "onPreferenceChange: " + o.toString());
+                return true;
+            }
+        });
+    }
+
+    private void EditPreference() {
+        mEditTextPreference = (EditTextPreference) findPreference(key_edit_preference);
+//        EditTextPreference默认就是可以点击，有EditDialog弹框的
+//        获取EditText的值还是要靠监听onPreferenceChange,EditText依旧在Object o中。
+        mEditTextPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                Log.i(TAG, "onPreferenceChange: " + o.toString());
+//                如此将输入的值获取并传到外面的类中，返回true表明这个值会被保存到文件中。
+//                如果需要什么操作，那最好还是调用方法
+                editReturnStr = o.toString();
                 return true;
             }
         });

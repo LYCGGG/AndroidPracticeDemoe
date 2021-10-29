@@ -103,3 +103,64 @@ public class TestA{
 这个Demo是用来学习Perference作为Activity时的一些简单用法，以及一些常用的Perference，它经常被用于系统应用中，但是第三方使用时似乎是不推荐的。
 
 其实它应该是比一般的Activity简单的，但是简单也会有问题。
+
+针对一些Preference进行了测试，发现其中的复杂点在于自定义的Preference，其中最烦的是自定义的EditPreference。从方法来说，EditPreference给出了不少可以复写的方法，然而这些方法并没有提高很高的自由度。
+具体来说，很多关键的参数和变量都是private,因此复写不如重写，既然都重写，我继承你这个类还有什么意义呢？
+
+#### CustomEditPreference
+
+单开一小节来介绍自定义的EditPreference.首先，它涉及到两个layout,即未点击时的Preference和点击后的弹框带Edit的Dialog。如果没有自定义的话，正常的流程是这样的：在构造时，会将Android包中的写好的一个id传过来，在点击时会传递这个id，并创建一个常规的AlertDialog.
+
+``` java
+    protected void showDialog(Bundle state) {
+        Context context = getContext();
+
+        mWhichButtonClicked = DialogInterface.BUTTON_NEGATIVE;
+
+        mBuilder = new AlertDialog.Builder(context)
+            .setTitle(mDialogTitle)
+            .setIcon(mDialogIcon)
+            .setPositiveButton(mPositiveButtonText, this)
+            .setNegativeButton(mNegativeButtonText, this);
+
+        View contentView = onCreateDialogView();
+        if (contentView != null) {
+            onBindDialogView(contentView);
+            mBuilder.setView(contentView);
+        } else {
+            mBuilder.setMessage(mDialogMessage);
+        }
+
+        onPrepareDialogBuilder(mBuilder);
+
+        getPreferenceManager().registerOnActivityDestroyListener(this);
+
+        // Create the dialog
+        final Dialog dialog = mDialog = mBuilder.create();
+        if (state != null) {
+            dialog.onRestoreInstanceState(state);
+        }
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+                removeDismissCallbacks();
+            }
+        });
+        dialog.setOnDismissListener(this);
+        dialog.show();
+    }
+```
+
+onClick() -> showDialog(null) -> 1.mBuilder创建 2.onCreateDialogView 3.onBindDialogView 4.mBuilder.create() 5.dialog.show -> over
+
+那么涉及到的方法有:
+* onClick:可以设置Bundle,传递给showDialog.
+* showDialog：可变的东西不多，关键的mBuilder不能改。
+* onCreateDialogView:就是根据构造时传递的layout_id创建布局，mBuidler和inflater同样无法修改
+* onBindDialogView: 从代码来看目前没有改动的需求
+
+怎么改动？能怎么改动？首先构造时使用我们自定义的Layout_Id,覆盖掉默认的。但是问题是有个方法叫getEditText,它得到的是默认的Edit，如果我们使用我们自己的Edit,那么就无法通过getEditText得到，也无法直接得到输入的文本，那么又要进行复写。那么怎么做呢？还是复写，那就没什么意义了。
+
+麻烦！其实也不是这个控件的问题，它的很多方法是protected的，就不该复写。
+
+目前给出的和能想到的方法就是在layout中添加一个布局，然后在onAddEditTextToDialogView中把系统的editText添加到view中。
