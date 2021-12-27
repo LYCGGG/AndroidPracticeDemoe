@@ -164,3 +164,9 @@ onClick() -> showDialog(null) -> 1.mBuilder创建 2.onCreateDialogView 3.onBindD
 麻烦！其实也不是这个控件的问题，它的很多方法是protected的，就不该复写。
 
 目前给出的和能想到的方法就是在layout中添加一个布局，然后在onAddEditTextToDialogView中把系统的editText添加到view中。
+
+## AIDL Demo
+
+为了更好的区分功能和理解原理，这个Demo由两个应用组成(实际上可以用一个Project来实现，原理是一致的)。
+
+学习时需要特别注意客户端和服务端的AIDL几个文件的包名，这样更好的理解其中的含义。
