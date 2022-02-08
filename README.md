@@ -170,3 +170,7 @@ onClick() -> showDialog(null) -> 1.mBuilder创建 2.onCreateDialogView 3.onBindD
 为了更好的区分功能和理解原理，这个Demo由两个应用组成(实际上可以用一个Project来实现，原理是一致的)。
 
 学习时需要特别注意客户端和服务端的AIDL几个文件的包名，这样更好的理解其中的含义。
+
+## JNI Demo
+
+用来学习和查看JNI在Android中的使用方法。
