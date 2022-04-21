@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo">
+        <activity android:name=".FragmentActivity"></activity>
+        <activity android:name=".UiActivity" />
+        <activity android:name=".SecondActivity">
+            <intent-filter>
+                <data
+                    android:host="指定参数"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

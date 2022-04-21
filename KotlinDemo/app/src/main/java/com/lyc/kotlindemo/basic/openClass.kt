@@ -1,4 +1,4 @@
-package com.lyc.kotlindemo
+package com.lyc.kotlindemo.basic
 
 // only open class can be extended
 // Kotlin中的类和Java一样，需要有构造函数，但是Kotlin有主构造函数和次构造函数
@@ -41,7 +41,8 @@ class  Class7 : Class3 {
 // 接口的继承和实现
 class Student(name: String, age: Int) : Class3(name, age) , Study{
     override fun doHomeWork() {
-
+        println("do Home Work ...")
+        Thread.sleep(1000)
     }
 
 }

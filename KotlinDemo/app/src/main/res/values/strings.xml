@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">KotlinDemo</string>
+    <string name="ADD">Add</string>
+    <string name="DELETE">Delete</string>
+    <string name="return_first">返回第一个界面</string>
+    <string name="jump2second">跳转到第二个界面</string>
+    <string name="test">Test</string>
+    <string name="jump2third">跳转到第三个界面</string>
+    <string name="listImage">ListImage</string>
+    <string name="jump2forth">跳转到第四个界面</string>
+    <string name="add_fragment">添加Fragment</string>
+    <string name="origin_text">原来文字</string>
 </resources>

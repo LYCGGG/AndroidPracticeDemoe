@@ -1,8 +1,11 @@
-package com.lyc.kotlindemo
+package com.lyc.kotlindemo.basic
 
 import kotlin.math.max
 
 class LearnKotlin {
+
+    // 延迟初始化，但是必须是var类型的变量
+    lateinit var tmpStr : String
 
 //    Kotlin Syntactic Sugar 1 : to test fun and if sentence
     fun largerNumber(num1 : Int, num2 : Int) = max(num1,num2)
