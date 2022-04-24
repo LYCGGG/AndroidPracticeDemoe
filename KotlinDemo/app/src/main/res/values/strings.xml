@@ -10,4 +10,7 @@
     <string name="jump2forth">跳转到第四个界面</string>
     <string name="add_fragment">添加Fragment</string>
     <string name="origin_text">原来文字</string>
+    <string name="jump2fifth">跳转到第五个界面</string>
+    <string name="btn_saveData">保存数据</string>
+    <string name="data">数据data</string>
 </resources>

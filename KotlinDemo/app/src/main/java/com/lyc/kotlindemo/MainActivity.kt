@@ -40,6 +40,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FragmentActivity::class.java)
             startActivity(intent)
         }
+
+        btn_jump2fifth.setOnClickListener {
+            val intent = Intent(this, FileSavedActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
