@@ -13,4 +13,5 @@
     <string name="jump2fifth">跳转到第五个界面</string>
     <string name="btn_saveData">保存数据</string>
     <string name="data">数据data</string>
+    <string name="saved_sharedpreferences">保存到SharedPreferences中</string>
 </resources>

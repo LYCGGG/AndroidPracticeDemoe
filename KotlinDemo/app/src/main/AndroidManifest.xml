@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo">
-        <activity android:name=".FileSavedActivity"></activity>
+        <activity android:name=".FileSavedActivity" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".UiActivity" />
         <activity android:name=".SecondActivity">

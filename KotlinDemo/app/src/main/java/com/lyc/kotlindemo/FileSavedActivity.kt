@@ -23,5 +23,14 @@ class FileSavedActivity : AppCompatActivity() {
                 }
             }
         }
+
+        btn_shared.setOnClickListener {
+            val editor = getSharedPreferences("data", MODE_PRIVATE).edit()
+            editor.putString("name", "TOM")
+            editor.putInt("age", 23)
+            editor.apply()
+        }
+
+        // 数据库存储略过
     }
 }

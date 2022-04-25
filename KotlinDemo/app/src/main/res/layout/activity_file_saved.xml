@@ -20,4 +20,10 @@
         android:hint="@string/data"
         android:autofillHints="username"
         android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_shared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saved_sharedpreferences" />
 </LinearLayout>
