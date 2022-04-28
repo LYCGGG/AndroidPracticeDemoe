@@ -45,4 +45,13 @@
         android:text="@string/jump2fifth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_jump2forth" />
+    <Button
+        android:id="@+id/btn_jump2sixth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/jump2sixth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_jump2fifth" />
 </androidx.constraintlayout.widget.ConstraintLayout>

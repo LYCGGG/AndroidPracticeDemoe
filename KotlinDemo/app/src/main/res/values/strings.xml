@@ -14,4 +14,6 @@
     <string name="btn_saveData">保存数据</string>
     <string name="data">数据data</string>
     <string name="saved_sharedpreferences">保存到SharedPreferences中</string>
+    <string name="jump2sixth">跳转到第六个界面</string>
+    <string name="takePhoto">拍照</string>
 </resources>
