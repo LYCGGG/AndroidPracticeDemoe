@@ -49,6 +49,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NotificationActivity::class.java)
             startActivity(intent)
         }
+
+        btn_jump2seventh.setOnClickListener {
+            val intent = Intent(this, WebUiActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

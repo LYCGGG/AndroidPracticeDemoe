@@ -16,4 +16,6 @@
     <string name="saved_sharedpreferences">保存到SharedPreferences中</string>
     <string name="jump2sixth">跳转到第六个界面</string>
     <string name="takePhoto">拍照</string>
+    <string name="jump2seventh">跳转到第七个界面</string>
+    <string name="getData">点击获取数据</string>
 </resources>
