@@ -15,22 +15,22 @@ data class UserTest(var firstName: String, var lastName: String, var age : Int) 
 @Dao
 interface UserDao {
     @Insert
-    fun insertUser(user: User) : Long
+    fun insertUser(user: UserTest) : Long
 
     @Update
-    fun updateUser(newUser : User)
+    fun updateUser(newUser : UserTest)
 
     @Query("select * from UserTest")
-    fun loadAllUsers() : List<User>
+    fun loadAllUsers() : List<UserTest>
 
-    @Query("select * from UserTest where age > 20")
-    fun loadUsersOlderThan()
+    @Query("select * from UserTest where age > :age")
+    fun loadUsersOlderThan(age: Int) : List<UserTest>
 
     @Delete
-    fun deleteUser(user: User)
+    fun deleteUser(user: UserTest)
 }
 
-@Database(version = 1, entities = [User::class])
+@Database(version = 1, entities = [UserTest::class], exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao
 
