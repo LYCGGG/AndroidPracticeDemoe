@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, WebUiActivity::class.java)
             startActivity(intent)
         }
+
+        btn_jump2eighth.setOnClickListener {
+            val intent = Intent(this, ViewModelActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

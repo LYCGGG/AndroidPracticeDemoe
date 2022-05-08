@@ -18,4 +18,7 @@
     <string name="takePhoto">拍照</string>
     <string name="jump2seventh">跳转到第七个界面</string>
     <string name="getData">点击获取数据</string>
+    <string name="jump2eighth">跳转到第八个界面</string>
+    <string name="click2count">点击计数</string>
+    <string name="click2clear">点击清空</string>
 </resources>
