@@ -8,7 +8,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import com.lyc.mylibrary.PermissionX
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
     val REQUEST_OK = 1
@@ -44,6 +46,32 @@ class MainActivity : AppCompatActivity() {
         btn_jump2fifth.setOnClickListener {
             val intent = Intent(this, FileSavedActivity::class.java)
             startActivity(intent)
+        }
+        btn_jump2sixth.setOnClickListener {
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_jump2seventh.setOnClickListener {
+            val intent = Intent(this, WebUiActivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_jump2eighth.setOnClickListener {
+            val intent = Intent(this, ViewModelActivity::class.java)
+            startActivity(intent)
+        }
+
+        PermissionX.request(this,
+            android.Manifest.permission.CALL_PHONE,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            android.Manifest.permission.READ_CONTACTS) {
+            allGranted, deniedList ->
+            if (allGranted) {
+                Toast.makeText(this,"All Permissions are granted", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "You Denied $deniedList", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

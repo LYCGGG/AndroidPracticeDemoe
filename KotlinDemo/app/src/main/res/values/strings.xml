@@ -14,4 +14,11 @@
     <string name="btn_saveData">保存数据</string>
     <string name="data">数据data</string>
     <string name="saved_sharedpreferences">保存到SharedPreferences中</string>
+    <string name="jump2sixth">跳转到第六个界面</string>
+    <string name="takePhoto">拍照</string>
+    <string name="jump2seventh">跳转到第七个界面</string>
+    <string name="getData">点击获取数据</string>
+    <string name="jump2eighth">跳转到第八个界面</string>
+    <string name="click2count">点击计数</string>
+    <string name="click2clear">点击清空</string>
 </resources>
