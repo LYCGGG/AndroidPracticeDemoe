@@ -174,3 +174,9 @@ onClick() -> showDialog(null) -> 1.mBuilder创建 2.onCreateDialogView 3.onBindD
 ## JNI Demo
 
 用来学习和查看JNI在Android中的使用方法。
+
+## PersonalDemo
+
+上面的代码仓库都是有一些历史的了，当时的管理方法是一个仓库下面存放多个项目，每个项目之间相互独立，管理方式是通过SourceTree软件进行统一提交的，但是我后来发现，不同项目之间使用不同的Module即可，不需要创建多个项目工程，于是就有了这个PersonalDemo.
+
+本项目主要用于练习和测试与面试有关的相关知识点。
