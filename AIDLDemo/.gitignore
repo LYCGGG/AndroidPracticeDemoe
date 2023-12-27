@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@LYCGGG 
-LYCGGG
-/
-AndroidPracticeDemos
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-AndroidPracticeDemos/AMSDemo/.gitignore
-@LYCGGG
-LYCGGG AMS和WMS学习过程中使用的Demo,目前只打了log确认Activity生命周期的问题,等待进一步学习。
-Latest commit bfb45f0 on 17 Nov
- History
- 1 contributor
-89 lines (71 sloc)  1.44 KB
-   
+
 # Built application files
 *.apk
 *.aar
@@ -116,16 +88,5 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
+
+

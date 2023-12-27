@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            addService = IAdd.Stub.asInterface((IBinder) iBinder);
             addService = IAdd.Stub.asInterface(iBinder);
 
+
         }
 
         @Override

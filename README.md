@@ -164,3 +164,19 @@ onClick() -> showDialog(null) -> 1.mBuilder创建 2.onCreateDialogView 3.onBindD
 麻烦！其实也不是这个控件的问题，它的很多方法是protected的，就不该复写。
 
 目前给出的和能想到的方法就是在layout中添加一个布局，然后在onAddEditTextToDialogView中把系统的editText添加到view中。
+
+## AIDL Demo
+
+为了更好的区分功能和理解原理，这个Demo由两个应用组成(实际上可以用一个Project来实现，原理是一致的)。
+
+学习时需要特别注意客户端和服务端的AIDL几个文件的包名，这样更好的理解其中的含义。
+
+## JNI Demo
+
+用来学习和查看JNI在Android中的使用方法。
+
+## PersonalDemo
+
+上面的代码仓库都是有一些历史的了，当时的管理方法是一个仓库下面存放多个项目，每个项目之间相互独立，管理方式是通过SourceTree软件进行统一提交的，但是我后来发现，不同项目之间使用不同的Module即可，不需要创建多个项目工程，于是就有了这个PersonalDemo.
+
+本项目主要用于练习和测试与面试有关的相关知识点。
